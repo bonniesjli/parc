@@ -1,6 +1,11 @@
 # Parc - A Learning Agents Framework
 
 A exceptionally clean codebase for reinforcement learning using pytorch, designed for simplicity and efficiency.
+<p float="left">
+  <img src="/img/ant.gif" width="250" />
+  <img src="/img/pushblock.gif" width="250" />
+  <img src="/img/dqn.gif" width="250" /> 
+</p>
 
 ### Algorithms
 * DQN: Deep Q Learning
