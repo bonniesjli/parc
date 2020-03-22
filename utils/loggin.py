@@ -76,6 +76,34 @@ class Logger():
             if name == "train_reward":
                 self.visualize("train_reward")
 
+class QuickLogger():
+    """
+    Log data and visualize, does not save files
+    """
+    def __init__(self):
+        self.variable_names = {}
+
+    def create(self, variable_name):
+        """Create a variable name to be logged"""
+        for name in self.variable_names:
+            if variable_name == name:
+                raise ValueError("variable name already exist")
+        self.variable_names[variable_name] = Variable(variable_name)
+
+
+    def log(self, variable_name, data, t_step):
+        """Log data under given variable name"""
+        self.variable_names[variable_name].step(data, t_step)
+
+    def visualize(self, variable_name):
+        """Visualize data under variable name"""
+        fig = plt.figure()
+        ax1 = fig.add_subplot(111)
+        plt.plot(self.variable_names[variable_name].t, self.variable_names[variable_name].data)
+        plt.ylabel(str(variable_name))
+        plt.xlabel('Steps')
+        plt.show()
+
 class Variable():
     def __init__(self, name):
         self.name = name

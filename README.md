@@ -4,7 +4,7 @@ A exceptionally clean codebase for reinforcement learning using pytorch, designe
 <p float="left">
   <img src="/img/ant.gif" width="250" />
   <img src="/img/pushblock.gif" width="250" />
-  <img src="/img/dqn.gif" width="250" /> 
+  <img src="/img/dqn.gif" width="250" />
 </p>
 
 ### Algorithms
@@ -25,12 +25,13 @@ usage: run.py  [--env ENV_NAME] [--eval EVAL]
                [--dir DIRECTORY]
                [--cuda]
 ```
-Quick Examples:
+#### Getting Started:
+See `dqn/getting_started.ipynb` for a quick tutorial on how to interface agents with environments.
+#### Quick Examples:
 ```
 python dqn/run.py --env CartPole-v1 --eps_decays 5000 --num_steps 10000
 python ddpg/run.py --env Reacher-v2 --start_steps 500 --num_steps 10000
 python td3/run.py --env Reacher-v2 --start_steps 500 --num_steps 10000
-
 ```
 See `exp_scripts.sh` for more sample commands. <br>
 See `exp.sh` for running on cloud or cluster.
@@ -40,6 +41,8 @@ See `exp.sh` for running on cloud or cluster.
 More dependencies to be added
 
 ```
+git clone https://github.com/bonniesjli/parc.git
+cd parc
 python setup.py develop
 ```
 

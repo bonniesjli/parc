@@ -3,6 +3,7 @@ setup.py
 parc.egg-info/PKG-INFO
 parc.egg-info/SOURCES.txt
 parc.egg-info/dependency_links.txt
+parc.egg-info/requires.txt
 parc.egg-info/top_level.txt
 utils/__init__.py
 utils/buffer.py
